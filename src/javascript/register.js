@@ -1,4 +1,4 @@
-class Register {
+export class Register {
     constructor(balance) {
         this.balance = balance;
     }
