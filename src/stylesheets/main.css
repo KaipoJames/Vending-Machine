@@ -43,7 +43,7 @@ main,
 }
 .dispenser-container {
   width: 21%;
-  height: 15vh;
+  height: 17vh;
   background: rgb(92, 99, 98);
   border: 1px solid rgb(92, 99, 98);
   position: relative;
@@ -54,8 +54,12 @@ main,
   background: rgb(179, 178, 178);
   position: absolute;
   bottom: 0;
+  text-align: center;
 }
 .dispenser-img {
   width: 5rem;
   height: auto;
+}
+.dispenser-img:hover {
+  width: 5.2rem;
 }
