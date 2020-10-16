@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main,
+.main-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: rgb(245, 244, 244);
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vending-machine {
+  min-height: 85vh;
+  width: 30%;
+  background: rgb(117, 141, 228);
+  border-radius: 20px;
+}

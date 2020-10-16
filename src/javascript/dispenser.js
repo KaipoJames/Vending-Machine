@@ -1,6 +1,6 @@
 export class Dispenser {
-    constructor(id, item, price, quantity) {
-        this.id = id;
+    constructor(itemCode, item, price, quantity) {
+        this.itemCode = itemCode;
         this.item = item;
         this.price = price.toFixed(2);
         this.quantity = quantity;
