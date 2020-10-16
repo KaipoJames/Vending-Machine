@@ -55,3 +55,7 @@ main,
   position: absolute;
   bottom: 0;
 }
+.dispenser-img {
+  width: 5rem;
+  height: auto;
+}
