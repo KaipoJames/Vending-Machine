@@ -4,7 +4,7 @@ export class Dispenser {
         this.item = item;
         this.price = price.toFixed(2);
         this.quantity = quantity;
-        this.src = "/img/" + this.item + ".png"
+        this.src = "/icon/" + this.item + ".png"
     }
 
     addQuantity() {

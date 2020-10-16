@@ -11,6 +11,7 @@ export class Vending {
     addDispenser(itemCode, name, price, quantity) {
         const dispensers = this.dispensers;
         const dispenser = new Dispenser(itemCode, name, price, quantity);
+        console.log(dispenser.src);
         dispensers.push(dispenser);
     }
 
