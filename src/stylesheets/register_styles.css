@@ -64,16 +64,11 @@
   background: rgb(105, 105, 105);
   border-radius: 5px;
   border: 1px solid black;
-  animation: click-key 2s ease-in;
 }
 
-@keyframes click-key {
-  0% {
-    left: 0;
-    top: 0px;
-  }
-  100% {
-    left: 0;
-    top: 100px;
-  }
+#input-code {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
 }

@@ -1,7 +1,8 @@
 import { dispensers  } from "./contents.js"
 
-const dispensersContainer = document.querySelector(".dispensers-container");
+export const dispensersContainer = document.querySelector(".dispensers-container");
 let imgClass = 0;
+
 
 // CODE TO HELP BUILD THE USER INTERFACE
 export const DispenserBuild = {
@@ -27,6 +28,8 @@ export const DispenserBuild = {
         const dispenserLabel = document.createElement("div");
         dispenserLabel.innerHTML = dispenserObj.itemCode + " $" + dispenserObj.price;
         dispenserLabel.classList.add("dispenser-label");
+        container.classList.add(dispenserObj.item + "-container");
+        container.classList.add(dispenserObj.item);
         container.appendChild(dispenserLabel);
     },
     // Create An Img for each Dispenser
