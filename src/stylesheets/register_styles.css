@@ -14,6 +14,15 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+}
+#clear-button {
+  margin-top: 0.2rem;
+  position: absolute;
+  left: 1.5rem;
+}
+#clear-button:hover {
+  cursor: pointer;
 }
 #current-money {
   margin-right: 2rem;
