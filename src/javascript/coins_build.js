@@ -5,6 +5,9 @@ let clearButton = document.querySelector("#clear-button");
 const coins = ["penny", "nickel", "dime", "quarter"];
 const coinValues = ["0.01", "0.05", "0.10", "0.25"];
 
+let money;
+money = parseFloat(moneyString.innerHTML.substr(1, 5));
+
 export const CoinsBuild = {
     init() {
         this.createCoinContainers();
@@ -43,29 +46,40 @@ export const CoinsBuild = {
         this.clearMoneyString();
     },
 
+    /* currentMoneyValue() {
+        let amount = 0;
+        amount = parseFloat(moneyString.innerHTML.substr(1, 5));
+        return amount;
+    }, */
+
     addCoinEventListener(coinElement, coin) {
         coinElement.addEventListener("click", () => {
-            console.log("clicked " + coin);
             switch (coin) {
                 case "penny":
-                    moneyString.innerHTML = "$ " + 0.01.toFixed(2);
+                    money +=  0.01;
+                    moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "nickel":
-                    moneyString.innerHTML = "$ " + 0.05.toFixed(2);
+                    money += 0.05;
+                    moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "dime":
-                    moneyString.innerHTML = "$ " + 0.10.toFixed(2);
+                    money += 0.10;
+                    moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "quarter":
-                    moneyString.innerHTML = "$ " + 0.25.toFixed(2);
+                    money += 0.25;
+                    moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
             }
+            console.log("Current Value: " + money.toFixed(2));
         });
     },
 
     clearMoneyString() {
         clearButton.addEventListener("click",() => {
-            moneyString.innerHTML = "$ " + 0.00.toFixed(2);
+            money = 0.00;
+            moneyString.innerHTML = "$ " + money.toFixed(2);
         });
     }
 
