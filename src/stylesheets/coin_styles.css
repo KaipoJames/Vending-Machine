@@ -13,10 +13,11 @@
   justify-content: center;
   align-items: center;
 }
-.coin-container img {
+.coinImg {
   width: 5rem;
   height: auto;
 }
-.coin-container img:hover {
+.coinImg:hover {
+  cursor: pointer;
   width: 5.3rem;
 }

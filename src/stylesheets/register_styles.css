@@ -1,0 +1,48 @@
+.register-container {
+  top: 59%;
+  height: 60vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.display-box-money {
+  min-height: 6vh;
+  width: 100%;
+  background: rgb(226, 226, 226);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#current-money {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+#keypad {
+  width: 100%;
+  height: 20vh;
+  padding: 0.2rem 0;
+  background: rgb(92, 99, 98);
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.key {
+  width: 17%;
+  height: 40%;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.key-text {
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.key:hover {
+  font-size: 2.6rem;
+  background: rgb(117, 117, 117);
+}

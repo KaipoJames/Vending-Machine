@@ -3,6 +3,7 @@
   height: auto;
 }
 .dispenser-img:hover {
+  cursor: pointer;
   width: 5.2rem;
 }
 .dispenser-img-1 {
