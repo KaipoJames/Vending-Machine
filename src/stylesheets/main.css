@@ -19,9 +19,8 @@ main,
   align-items: center;
 }
 .vending-machine {
-  min-height: 85vh;
+  min-height: 150vh;
   width: 30%;
-  background: rgb(117, 141, 228);
   background: rgb(255, 255, 255);
   border-radius: 5px;
   position: relative;
@@ -30,16 +29,18 @@ main,
   align-items: center;
   justify-content: space-evenly;
 }
-.dispensers-container {
+.vending-container {
   position: absolute;
-  top: 0;
-  min-height: 70vh;
-  padding: 0.4rem 0.2rem;
   width: 95%;
-  margin-top: 2.5%;
   background: rgb(111, 119, 118);
   border-radius: 5px;
   display: flex;
+}
+.dispensers-container {
+  top: 0;
+  min-height: 70vh;
+  padding: 0.4rem 0.2rem;
+  margin-top: 2.5%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;

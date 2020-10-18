@@ -1,9 +1,11 @@
-import { DispenserBuild as BuildDispenser } from "./dispenser_build.js";
+import { DispenserBuild as BuildDispensers } from "./dispensers_build.js";
+import { CoinsBuild as BuildCoins } from "./coins_build.js"
 
 
 const app = {
     init() {
-        BuildDispenser.init();
+        BuildDispensers.init();
+        BuildCoins.init();
     }
 }
 

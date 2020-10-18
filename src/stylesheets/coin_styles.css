@@ -1,0 +1,22 @@
+.coins-container {
+  top: 49%;
+  min-height: 13vh;
+  width: 95%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.coin-container {
+  min-height: 10vh;
+  width: 5.5vw;
+  background: rgb(92, 99, 98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coin-container img {
+  width: 5rem;
+  height: auto;
+}
+.coin-container img:hover {
+  width: 5.3rem;
+}
