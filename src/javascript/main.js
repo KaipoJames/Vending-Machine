@@ -18,9 +18,11 @@ machine.addDispenser('H4', 'mango', 1.25, 10);
 //machine.showContents();
 
 const dispensers = machine.returnAllDispensers();
-console.log(dispensers[0]);
+console.log("Dispensers Length: " + dispensers.length);
 
 const dispensersContainer = document.querySelector(".dispensers-container");
+
+let imgClass = 0;
 
 // CODE TO HELP BUILD THE USER INTERFACE
 const DispenserBuild = {
@@ -30,8 +32,9 @@ const DispenserBuild = {
 
     // Crate Dispenser Container
     createDispenserContainer(dispenserCount) {
-        for (let i=0; i < dispenserCount; i++) {
+        for (let i=0; i < dispenserCount-4; i++) {
             const container = document.createElement("div");
+            console.log(dispensers[i]);
             this.createDispenserImage(container, dispensers[i].src);
             this.createDispenserLabel(container, dispensers[i]);
             container.classList.add("dispenser-container");
@@ -50,11 +53,11 @@ const DispenserBuild = {
     createDispenserImage(container, imageSrc) {
         let dispenserImage = document.createElement("img");
         dispenserImage.classList.add("dispenser-img");
+        dispenserImage.classList.add("dispenser-img-" + imgClass);
         dispenserImage.src = imageSrc;
         container.appendChild(dispenserImage);
+        imgClass++;
     }
-
-
 }
 
 DispenserBuild.init();

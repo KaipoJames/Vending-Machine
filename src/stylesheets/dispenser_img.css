@@ -1,0 +1,52 @@
+.dispenser-img {
+  width: 5rem;
+  height: auto;
+}
+.dispenser-img:hover {
+  width: 5.2rem;
+}
+.dispenser-img-1 {
+  margin-top: 0.4rem;
+}
+.dispenser-img-2 {
+  width: 4.5rem;
+  margin-top: 0.4rem;
+}
+.dispenser-img-2:hover {
+  width: 4.7rem;
+}
+.dispenser-img-3 {
+  width: 6rem;
+  margin-top: -0.3rem;
+}
+.dispenser-img-3:hover {
+  width: 6.2rem;
+}
+.dispenser-img-4 {
+  width: 8rem;
+}
+.dispenser-img-4:hover {
+  width: 8.2rem;
+}
+.dispenser-img-5 {
+  width: 5.6rem;
+}
+.dispenser-img-5:hover {
+  width: 5.8rem;
+}
+.dispenser-img-6 {
+  width: 4.3rem;
+}
+.dispenser-img-6:hover {
+  width: 4.5rem;
+}
+.dispenser-img-8 {
+  width: 7rem;
+  margin-top: 0.8rem;
+}
+.dispenser-img-8:hover {
+  width: 7.2rem;
+}
+.dispenser-img-9 {
+  margin-top: 0.3rem;
+}

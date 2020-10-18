@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Montserrat", sans-serif;
+}
 main,
 .main-container {
   min-height: 100vh;
@@ -47,6 +50,9 @@ main,
   background: rgb(92, 99, 98);
   border: 1px solid rgb(92, 99, 98);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .dispenser-label {
   width: 100%;
@@ -55,11 +61,5 @@ main,
   position: absolute;
   bottom: 0;
   text-align: center;
-}
-.dispenser-img {
-  width: 5rem;
-  height: auto;
-}
-.dispenser-img:hover {
-  width: 5.2rem;
+  padding-top: 0.2rem;
 }
