@@ -14,6 +14,7 @@ export const BuildRegister = {
         key.classList.add("key");
         key.classList.add(keyName + "-key");
         this.createKeyText(key, keyName);
+        this.toggleKeyClickClass(key);
         keyPadContainer.appendChild(key);
     },
     createKeyText(keyContainer, keyName) {
@@ -21,5 +22,11 @@ export const BuildRegister = {
         keyText.innerHTML = keyName;
         keyText.classList.add("key-text");
         keyContainer.appendChild(keyText);
+    },
+
+    toggleKeyClickClass(keyElement) {
+        keyElement.addEventListener("click", () => {
+            keyElement.classList.toggle("key-click");
+        });
     }
 }

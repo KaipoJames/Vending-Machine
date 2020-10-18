@@ -46,12 +46,6 @@ export const CoinsBuild = {
         this.clearMoneyString();
     },
 
-    /* currentMoneyValue() {
-        let amount = 0;
-        amount = parseFloat(moneyString.innerHTML.substr(1, 5));
-        return amount;
-    }, */
-
     addCoinEventListener(coinElement, coin) {
         coinElement.addEventListener("click", () => {
             switch (coin) {

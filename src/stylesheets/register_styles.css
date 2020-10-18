@@ -43,15 +43,37 @@
   width: 17%;
   height: 40%;
   background: gray;
+  border: 1px solid gray;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .key-text {
-  cursor: pointer;
   font-size: 2.5rem;
 }
-.key:hover {
+.key-text:hover {
   font-size: 2.6rem;
-  background: rgb(117, 117, 117);
+}
+.key:hover {
+  cursor: pointer;
+  background: rgb(105, 105, 105);
+  border: 1px solid black;
+}
+
+.key-click {
+  background: rgb(105, 105, 105);
+  border-radius: 5px;
+  border: 1px solid black;
+  animation: click-key 2s ease-in;
+}
+
+@keyframes click-key {
+  0% {
+    left: 0;
+    top: 0px;
+  }
+  100% {
+    left: 0;
+    top: 100px;
+  }
 }
