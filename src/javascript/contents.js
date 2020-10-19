@@ -1,4 +1,4 @@
-import { Vending } from "./vending.js";
+import { Vending } from "./classes/vending.js";
 
 const machine = new Vending("Kaipo's Machine");
 machine.addDispenser('C1', 'pizza', 2.50, 10);

@@ -72,3 +72,19 @@
   font-size: 1.5rem;
   width: 100%;
 }
+
+.dispense-btn {
+  width: 25vw;
+  height: 10vh;
+  background: rgb(230, 230, 230);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10vh;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.dispense-btn:hover {
+  cursor: pointer;
+  background: rgb(222, 222, 222);
+  border-radius: 5px;
+}

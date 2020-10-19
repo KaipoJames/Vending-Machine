@@ -1,4 +1,4 @@
-import { dispensers  } from "./contents.js"
+import { dispensers  } from "../contents.js"
 
 export const dispensersContainer = document.querySelector(".dispensers-container");
 let imgClass = 0;
@@ -30,6 +30,7 @@ export const DispenserBuild = {
         dispenserLabel.classList.add("dispenser-label");
         container.classList.add(dispenserObj.item + "-container");
         container.classList.add(dispenserObj.item);
+        container.classList.add(dispenserObj.price);
         container.appendChild(dispenserLabel);
     },
     // Create An Img for each Dispenser

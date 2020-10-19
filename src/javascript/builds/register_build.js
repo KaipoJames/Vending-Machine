@@ -14,7 +14,6 @@ export const BuildRegister = {
         for (var key of keyCharacters) {
             this.appendKey(key);
         }
-        console.log(this.getItemcodes());
     },
     appendKey(keyName) {
         const key = document.createElement("div");
@@ -30,7 +29,6 @@ export const BuildRegister = {
         keyText.classList.add("key-text");
         keyContainer.appendChild(keyText);
     },
-
     toggleKeyClickClass(keyElement) {
         keyElement.addEventListener("click", () => {
             if (inputCode.length <= 1 && !keyElement.classList.contains("key-click")) {
@@ -42,12 +40,11 @@ export const BuildRegister = {
             keyElement.classList.toggle("key-click");
             const selectedDispenser = this.getDispenserByCode(inputCode);
             if (selectedDispenser) {
-                inputCodeString.innerHTML = "Selected Item: " + selectedDispenser.classList[1];
+                inputCodeString.innerHTML = "Selected Item: " + selectedDispenser.classList[1] + "<br />" + "Please Deposit: $" + selectedDispenser.classList[2];
                 console.log(selectedDispenser);
             }
         });
     },
-
     getDispenserByCode(inputCode) {
         for (const dispenser of dispensers) {
             let itemCode = dispenser.children[1].innerHTML.substr(0,2);
@@ -56,7 +53,6 @@ export const BuildRegister = {
             }
         }
     },
-
     getItemcodes() {
         for (const dispenser of dispensers) {
             let itemCode = dispenser.children[1].innerHTML.substr(0,2);
