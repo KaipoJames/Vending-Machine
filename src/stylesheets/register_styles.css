@@ -1,6 +1,6 @@
 .register-container {
   top: 59%;
-  height: 60vh;
+  height: 65vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,7 @@
   width: 100%;
 }
 
-.dispense-btn {
+#dispense-btn {
   width: 25vw;
   height: 10vh;
   background: rgb(230, 230, 230);
@@ -83,8 +83,13 @@
   font-size: 2rem;
   margin-top: 1rem;
 }
-.dispense-btn:hover {
+#dispense-btn:hover {
   cursor: pointer;
   background: rgb(222, 222, 222);
   border-radius: 5px;
+}
+
+.change-element {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
 }

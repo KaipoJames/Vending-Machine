@@ -1,12 +1,13 @@
+import { BuildRegister } from "./register_build.js"
+
 const coinsContainer = document.querySelector(".coins-container");
 let moneyString = document.querySelector("#current-money");
 let clearButton = document.querySelector("#clear-button");
 
 const coins = ["penny", "nickel", "dime", "quarter"];
-const coinValues = ["0.01", "0.05", "0.10", "0.25"];
+const coinValues = [0.01, 0.05, 0.10, 0.25];
 
-let money;
-money = parseFloat(moneyString.innerHTML.substr(1, 5));
+export let money = parseFloat(moneyString.innerHTML.substr(1, 5));
 
 export const CoinsBuild = {
     init() {
@@ -50,23 +51,22 @@ export const CoinsBuild = {
         coinElement.addEventListener("click", () => {
             switch (coin) {
                 case "penny":
-                    money +=  0.01;
+                    money +=  coinValues[0];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "nickel":
-                    money += 0.05;
+                    money += coinValues[1];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "dime":
-                    money += 0.10;
+                    money += coinValues[2];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
                 case "quarter":
-                    money += 0.25;
+                    money += coinValues[3];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
                     break;
             }
-            console.log("Current Value: " + money.toFixed(2));
         });
     },
 

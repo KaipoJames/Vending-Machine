@@ -19,7 +19,7 @@ main,
   align-items: center;
 }
 .vending-machine {
-  min-height: 150vh;
+  min-height: 160vh;
   width: 30%;
   background: rgb(255, 255, 255);
   border-radius: 5px;
