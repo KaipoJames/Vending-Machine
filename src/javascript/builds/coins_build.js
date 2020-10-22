@@ -53,18 +53,22 @@ export const CoinsBuild = {
                 case "penny":
                     money +=  coinValues[0];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
+                    BuildRegister.updateMoneyEntered();
                     break;
                 case "nickel":
                     money += coinValues[1];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
+                    BuildRegister.updateMoneyEntered();
                     break;
                 case "dime":
                     money += coinValues[2];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
+                    BuildRegister.updateMoneyEntered();
                     break;
                 case "quarter":
                     money += coinValues[3];
                     moneyString.innerHTML = "$ " + money.toFixed(2);
+                    BuildRegister.updateMoneyEntered();
                     break;
             }
         });

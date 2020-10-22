@@ -6,6 +6,7 @@ const keyPadContainer = document.querySelector("#keypad");
 const inputCodeString = document.querySelector("#input-code");
 const dispenseButton = document.querySelector("#dispense-btn");
 const moneyEnteredString = document.querySelector("#current-money");
+const changeEl = document.querySelector(".change-element");
 const dispensers = dispensersContainer.children;
 
 const keyCharacters = ["A", "C", "H", "K", "Z", "1", "2", "3", "4", "5"];
@@ -46,12 +47,8 @@ export const BuildRegister = {
             }
             inputCodeString.innerHTML = inputCode;
             keyElement.classList.toggle("key-click");
-            const selectedDispenser = this.getDispenserByCode(inputCode);
-            if (selectedDispenser) {
-                inputCodeString.innerHTML = "Selected Item: " + selectedDispenser.classList[1] + "<br />" + "Please Deposit: $" + selectedDispenser.classList[2];
-                itemPrice = parseFloat(selectedDispenser.classList[2]);
-                console.log(selectedDispenser);
-            }
+            changeEl.innerHTML = "";
+            this.selectDispenser(inputCode);
             this.updateMoneyEntered();
             console.log("Item Price: " + itemPrice);
             console.log("Length Of Key Codes Selected: " + selectedKeyCodes.length);
@@ -69,6 +66,15 @@ export const BuildRegister = {
         }
     },
 
+    selectDispenser(inputCode) {
+        const selectedDispenser = this.getDispenserByCode(inputCode);
+            if (selectedDispenser) {
+                inputCodeString.innerHTML = "Selected Item: " + selectedDispenser.classList[1] + "<br />" + "Please Deposit: $" + selectedDispenser.classList[2];
+                itemPrice = parseFloat(selectedDispenser.classList[2]);
+                console.log(selectedDispenser);
+            }
+    },
+
     dispenseItem(moneyEntered, itemPrice) {
         dispenseButton.addEventListener("click", () => {
             console.log("Item Dispensed. Now Returning Your Change!");
@@ -78,7 +84,6 @@ export const BuildRegister = {
 
     returnChange(moneyEntered, itemPrice) {
         let change = moneyEntered - itemPrice;
-        const changeEl = document.createElement("h3");
         changeEl.classList.add("change-element");
         changeEl.innerHTML = "Returned your change of $" + change.toFixed(2);
         registerContainer.appendChild(changeEl);
